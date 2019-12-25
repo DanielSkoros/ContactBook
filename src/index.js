@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { BrowserRouter } from "react-router-dom";
 import Routes from './App';
 
 import { Provider } from 'react-redux';
@@ -20,8 +19,6 @@ export const store = storeWithMiddleware(
 
 ReactDOM.render(
         <Provider store={store}>
-            <BrowserRouter>
-                <Routes />
-            </BrowserRouter>
+            <Routes />
         </Provider>,
     document.getElementById('root'));
